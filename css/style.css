@@ -1,0 +1,138 @@
+/* Thiết lập cơ bản cho toàn trang */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Định dạng Header */
+header {
+    background-color: #1a237e; /* Màu xanh đậm */
+    color: white;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+}
+
+/* Định dạng Gallery (Trang chủ) */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 20px;
+}
+
+.year-block {
+    background-color: white;
+    width: 300px; 
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.year-block:hover {
+    transform: translateY(-5px); 
+}
+
+.image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.year-block h2 {
+    color: #3949ab; 
+    padding: 15px 0 5px;
+    font-size: 1.5em;
+}
+
+.year-block p {
+    padding: 0 15px 15px;
+}
+
+/* Định dạng nút xem chi tiết */
+.button {
+    display: inline-block;
+    background-color: #ff5722; /* Màu cam */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; 
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #e64a19; 
+}
+
+/* Định dạng Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+
+/* === PHẦN CSS CHO TRANG ALBUM (canhan.html, banbe.html, callop.html) === */
+
+.album-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-section h2 {
+    color: #1a237e;
+    border-bottom: 2px solid #ff5722;
+    padding-bottom: 5px;
+}
+
+/* Định dạng lưới ảnh mới */
+.photo-grid {
+    display: grid;
+    /* Tự động chia cột, mỗi cột rộng tối thiểu 200px */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-photo {
+    width: 100%;
+    height: 250px; /* Chiều cao cố định để ảnh đồng đều */
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.grid-photo:hover {
+    transform: scale(1.03); /* Phóng to nhẹ khi rê chuột */
+    z-index: 10;
+}
